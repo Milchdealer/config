@@ -1,0 +1,24 @@
+# Aliases
+# fs
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -la'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+function mkcd {
+    local target=$1
+    mkdir -p "$target"
+    cd $target
+}
+
+# git
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gA='git add -A'
+alias gc='git commit'
+alias gco='git checkout'
+alias gp='git pull'
+alias gf='git fetch'
+alias gb='git branch'
