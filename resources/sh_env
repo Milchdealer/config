@@ -1,2 +1,11 @@
 # Environment variables
-export EDITOR=subl3
+# set $EDITOR
+if command -v subl3 2>/dev/null; then
+	export EDITOR=subl3
+elif command -v subl 2>/dev/null; then
+	export EDITOR=subl
+elif command -v nano 2>/dev/null; then
+	export EDITOR=nano
+elif command -v vim 2>/dev/null; then
+	export EDITOR=vim
+fi
