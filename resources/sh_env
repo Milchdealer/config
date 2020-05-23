@@ -1,5 +1,4 @@
-# Environment variables
-# set $EDITOR
+
 if command -v subl3 2>/dev/null; then
 	export EDITOR=subl3
 elif command -v subl 2>/dev/null; then
