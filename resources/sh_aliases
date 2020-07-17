@@ -22,3 +22,12 @@ alias gco='git checkout'
 alias gp='git pull'
 alias gf='git fetch'
 alias gb='git branch'
+
+# erlang
+alias rebar='rebar3'
+
+# k8s
+alias mk8s='snap run microk8s'
+alias mhelm='snap run microk8s helm'
+alias mhelm3='snap run microk8s helm3'
+alias mkubectl='snap run microk8s kubectl'
