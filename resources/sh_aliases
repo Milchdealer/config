@@ -13,6 +13,15 @@ function mkcd {
 }
 
 # git
+function git_update_fork {
+	local upstream=${1:-upstream}
+	local main_branch=${2:-master}
+
+	git fetch $upstream
+	git checkout $main_branch
+	git rebase $upstream/$main_branch
+}
+
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
@@ -22,6 +31,7 @@ alias gco='git checkout'
 alias gp='git pull'
 alias gf='git fetch'
 alias gb='git branch'
+alias guf='git_update_fork'
 
 # erlang
 alias rebar='rebar3'
