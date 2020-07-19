@@ -17,9 +17,12 @@ function git_update_fork {
 	local upstream=${1:-upstream}
 	local main_branch=${2:-master}
 
+	git checkout $main_branch
 	git fetch $upstream
 	git checkout $main_branch
 	git rebase $upstream/$main_branch
+
+	echo "${main_branch} now aligns with ${upstream}/${main_branch}. Don't forget to push!"
 }
 
 alias gs='git status'
